@@ -9,6 +9,7 @@ const eyeSize = 72;
 const eyeRadius = 34;
 const basePanelWidth = 740;
 const basePanelHeight = 370;
+const riveAssetPath = `${import.meta.env.BASE_URL}eyes.riv`;
 const eyeInstances = Array.from({ length: eyeCount }, (_, index) => ({
   id: index,
   instanceName: `Instance ${index + 1}`,
@@ -351,7 +352,7 @@ function RiveEye({
     let isCancelled = false;
 
     riveInstance = new Rive({
-      src: "/eyes.riv",
+      src: riveAssetPath,
       canvas,
       artboard: artboardName,
       autoplay: true,
