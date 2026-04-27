@@ -102,12 +102,9 @@ function IllustrationCarousel() {
       lastTime = time;
       const maxX = playground.clientWidth - eyeSize;
       const maxY = playground.clientHeight - eyeSize;
-      const centerX = playground.clientWidth / 2;
 
       eyesRef.current.forEach((eye) => {
         if (eye.isActive && !eye.isDragging) {
-          const eyeCenterX = eye.x + eyeSize / 2;
-          eye.vx += (centerX - eyeCenterX) * 0.9 * dt;
           eye.vy += 980 * dt;
           eye.x += eye.vx * dt;
           eye.y += eye.vy * dt;
