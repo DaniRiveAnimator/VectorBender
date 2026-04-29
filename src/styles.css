@@ -165,9 +165,12 @@ body {
   border-radius: 50%;
   background: transparent;
   cursor: grab;
+  contain: layout paint style;
   transform: translate3d(0, 0, 0);
   transform-origin: center;
   user-select: none;
+  -webkit-user-select: none;
+  backface-visibility: hidden;
   will-change: transform;
 }
 
@@ -175,10 +178,23 @@ body {
   cursor: grabbing;
 }
 
+.eye-body.is-dragging {
+  z-index: 5;
+  cursor: grabbing;
+}
+
 .eye-body canvas {
   display: block;
   width: 72px;
   height: 72px;
+  pointer-events: none;
+}
+
+.rive-metadata-probe {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
   pointer-events: none;
 }
 
