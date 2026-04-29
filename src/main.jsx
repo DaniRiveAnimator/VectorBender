@@ -4,7 +4,7 @@ import { Alignment, Fit, Layout, Rive } from "@rive-app/canvas";
 import "./styles.css";
 
 const carouselRows = Array.from({ length: 7 }, (_, index) => index);
-const eyeCount = 15;
+const eyeCount = 17;
 const eyeSize = 72;
 const eyeRadius = 34;
 const basePanelWidth = 740;
